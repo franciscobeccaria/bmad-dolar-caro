@@ -9,7 +9,7 @@ Actualmente, el proyecto ha completado de forma exitosa toda la **Fase de Planif
 ## 🤖 Metodología de Trabajo: BMad-Method
 Este proyecto se está desarrollando utilizando el **BMad-Method (Breakthrough Method of Agile AI-driven Development)**. Es un framework que estructura el desarrollo con IA en dos fases claras:
 
-1.  **Fase de Planificación Estratégica:** Esta es la fase que acabamos de completar. Se realiza en un entorno conversacional de amplio contexto. Un **Orchestrator de IA** asume los roles de un equipo completo de especialistas para colaborar con el stakeholder (tú) y transformar la idea inicial en un plan técnico y de producto completo. El objetivo es tomar todas las decisiones clave antes de escribir código para minimizar la ambigüedad y el retrabajo. El equipo de IA que participó fue:
+1.  **Fase de Planificación Estratégica:** Esta es la fase que acabamos de completar. Se realiza en un entorno conversacional de amplio contexto. Un **Orchestrator de IA** asume los roles de un equipo completo de especialistas para colaborar con el stakeholder (tú) y transformar la idea inicial en un plan técnico y de producto completo. El objetivo es tomar todas las decisiones clave antes de escribir código. El equipo de IA que participó fue:
     * **Analista (Mary):** Para la investigación inicial y la creación del *Project Brief*.
     * **Product Manager (John):** Para la creación del *Product Requirements Document (PRD)* y el desglose en historias de usuario.
     * **Experto en UX (Sally):** Para definir la experiencia de usuario y la especificación visual en la *UI/UX Specification*.
@@ -18,26 +18,36 @@ Este proyecto se está desarrollando utilizando el **BMad-Method (Breakthrough M
 
 2.  **Fase de Desarrollo Táctico:** Esta fase comienza ahora. Se lleva a cabo en un IDE con capacidades de IA. Aquí, agentes de IA especializados en desarrollo (`@dev`) toman los planes detallados que creamos y los ejecutan, escribiendo el código, creando archivos y corriendo pruebas directamente en el entorno de desarrollo.
 
+## 🛠️ Herramientas Utilizadas
+
+#### **Entorno de Planificación: Google Gemini**
+Toda la fase de planificación estratégica se ha llevado a cabo utilizando **Google Gemini**. Se configuró un "Gem" personalizado para actuar como el equipo de agentes de IA "BMAD FULLSTACK TEAM".
+* **Fuente de la Configuración:** [BMAD-METHOD/dist/teams/team-fullstack.txt](https://github.com/bmadcode/BMAD-METHOD/blob/main/dist/teams/team-fullstack.txt)
+
+#### **Documentación y Tutorial**
+El proceso se ha guiado siguiendo la documentación y los ejemplos prácticos presentados en el siguiente tutorial en video:
+* **Tutorial de Referencia:** [BMAD-METHOD - FULLSTACK TEAM IN ACTION (Youtube)](https://www.youtube.com/watch?v=l9iqJIRZzkA)
+
 ## 📂 Documentos Fundamentales del Proyecto
 Toda la planificación se ha consolidado en los siguientes cuatro documentos, que deberían encontrarse en una carpeta `/docs` de este repositorio:
 
-1.  **`project-brief.md` (El "Porqué"):** Es el punto de partida y la visión del proyecto. Define el problema que se resuelve para nuestro usuario objetivo ("El Ciudadano Curioso"), la solución propuesta, las metas del negocio y el alcance general del Producto Mínimo Viable (MVP).
+1.  **`project-brief.md` (El "Porqué"):** Es el punto de partida y la visión del proyecto. Define el problema que se resuelve para nuestro usuario objetivo ("El Ciudadano Curioso") y el alcance general del MVP.
 
-2.  **`product-requirements-document.md` (El "Qué"):** Es el plan de acción detallado. Traduce la visión en requisitos funcionales y no funcionales concretos. Contiene el backlog completo para el MVP, desglosado en una Épica y 5 historias de usuario con sus respectivos criterios de aceptación.
+2.  **`product-requirements-document.md` (El "Qué"):** Es el plan de acción detallado. Traduce la visión en requisitos concretos. Contiene el backlog completo para el MVP, desglosado en una Épica y 5 historias de usuario con sus criterios de aceptación.
 
-3.  **`ui-ux-specification.md` (El "Cómo se Siente"):** Es la guía para la experiencia del usuario y la identidad visual. Define el estilo "fintech" moderno que buscamos, la paleta de colores, la tipografía, la arquitectura de la información y las directrices de accesibilidad. Incluye un prompt detallado para generar el código base del frontend con herramientas como Vercel v0.
+3.  **`ui-ux-specification.md` (El "Cómo se Siente"):** Es la guía para la experiencia del usuario y la identidad visual. Incluye la guía de estilo, la arquitectura de la información y un prompt detallado para generar el código base del frontend con herramientas de IA como Vercel v0.
 
-4.  **`fullstack-architecture.md` (El "Cómo se Construye"):** Es el plano técnico detallado. Define la pila tecnológica (Next.js, NestJS, Vercel, Railway), la infraestructura, el diseño de la base de datos, la especificación de la API, la estrategia de pruebas (incluyendo E2E con Playwright) y los estándares de codificación que el agente de IA debe seguir.
+4.  **`fullstack-architecture.md` (El "Cómo se Construye"):** Es el plano técnico detallado. Define la pila tecnológica (Next.js, NestJS, Vercel, Railway), la infraestructura, el diseño de la base de datos, la especificación de la API y los estándares de codificación que el agente de IA debe seguir.
 
 ## 🚀 Próximos Pasos: Fase de Desarrollo con IA
 La Fase de Desarrollo se llevará a cabo en un **IDE con capacidades de IA, como Windsurf o Claude Code**.
 
-El éxito del desarrollo con IA no depende de "prompts" improvisados, sino de la calidad de los documentos que ya hemos creado. **El PRD y, más específicamente, los "tickets" de cada historia de usuario, son los prompts detallados y explicativos que guiarán al agente de IA.** No es necesario crear nuevos prompts; usaremos la estructura de tareas que ya definimos.
+El éxito del desarrollo con IA no depende de "prompts" improvisados, sino de la calidad de los documentos que ya hemos creado. **El PRD y, más específicamente, los "tickets" de cada historia de usuario, son los prompts detallados y explicativos que guiarán al agente de IA.**
 
 El flujo de trabajo en el IDE será el siguiente:
 1.  **Iniciar un Nuevo Chat:** Para cada historia de usuario, se iniciará un nuevo chat limpio en el IDE.
 2.  **Invocar al Agente:** Se llamará al agente de desarrollo (ej. `@dev`).
-3.  **Proporcionar el Ticket:** Se le pasará el "ticket" completo de la historia (con sus tareas, criterios de aceptación y notas técnicas, tal como lo definimos).
+3.  **Proporcionar el Ticket:** Se le pasará el "ticket" completo de la historia (con sus tareas, criterios de aceptación y notas técnicas).
 4.  **Ejecución:** El agente de IA ejecutará las tareas, escribiendo el código directamente en los repositorios del proyecto.
 
 Comenzaremos con la **Historia 1.1: Configuración del Backend y API de Datos Manuales**.
